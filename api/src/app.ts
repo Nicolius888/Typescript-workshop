@@ -3,6 +3,7 @@ import config from './lib/config';
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
 import cors from 'cors';
+import routes from './routes/index';
 
 const app: Application = express(); 
 // app its an application, we bring this type from express.
@@ -46,5 +47,7 @@ app.use((err: error, req: Request, res: Response, next: NextFunction) => {
 app.get('/', (req: Request, res: Response) => {
 	res.send('hola typescript!');
 });
+
+app.use('/api', routes);
 
 export default app;
