@@ -3,8 +3,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const config = {
-	dbUser: process.env.DB_USER || 'postgres',
-	dbPassword: process.env.DB_PASSWORD || '1234',
+	dbUser: process.env.DB_USER || 'nico',
+	dbPassword: process.env.DB_PASSWORD || '101022',
 	dbHost: process.env.DB_HOST || 'localhost',
 	dbName: process.env.DB_NAME || 'workshop',
 	dbPort: process.env.DB_PORT || '5432',
