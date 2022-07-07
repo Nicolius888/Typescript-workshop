@@ -11,14 +11,16 @@ router.post('/', (req: Request, res: Response) => {
 });
 
 router.get('/user', (req: Request, res: Response, next: NextFunction) => {
+	// console.log("estoy en el get de user");
 	User.findAll()
-		.then((users) => {
-			res.send(users);
-		})
-		.catch((error) => next(error));
+	.then((users) => {
+		res.send(users);
+	})
+	.catch((error) => next(error));
 });
 
 router.post('/user', (req: Request, res: Response, next: NextFunction) => {
+	// console.log("estoy en el post de user");
 	const user = req.body;
 	User.create(user)
 		.then((createdUser) => {

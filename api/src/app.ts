@@ -7,6 +7,7 @@ import routes from './routes/index';
 
 const app: Application = express(); 
 // app its an application, we bring this type from express.
+
 //Henry says:
 // Lo que estamos haciendo ahi,
 // es decirle nuestra variable app que es
@@ -44,10 +45,10 @@ app.use((err: error, req: Request, res: Response, next: NextFunction) => {
 	res.status(status).send(message);
 });
 
-app.get('/', (req: Request, res: Response) => {
-	res.send('hola typescript!');
-});
-
-app.use('/api', routes);
+//just for initial test
+// app.get('/', (req: Request, res: Response) => {
+// 	res.send('hola typescript!');
+// });
+app.use('/', routes);
 
 export default app;
