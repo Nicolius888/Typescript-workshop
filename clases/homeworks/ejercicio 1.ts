@@ -20,7 +20,7 @@ let unNull: null = null; //que pasa aca?
 
 let unUndefined: undefined = undefined //y aca?
 
-	
+	console.log(unString,unNumber, unBoolean,unNull, unUndefined)
 // Enum
 enum Fases {
     Primera, //0
@@ -28,12 +28,12 @@ enum Fases {
     Tercera //2
 }
 let phase: Fases = Fases.Primera; // 0
-
+console.log(phase)
 enum userActions {
     fetchUser = "FETCH_USER", // "FETCH_USER"
     postUser = "POST_USER" // "POST_USER"
 }
 
 let action: userActions = userActions.postUser
-
+console.log(action)
 export {}
