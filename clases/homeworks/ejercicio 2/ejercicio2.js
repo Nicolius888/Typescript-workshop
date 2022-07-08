@@ -33,9 +33,9 @@ var unkValue = "Matias";
 var str1 = anyValue; // Todo OK, puedo asignarlo
 // let str2: string = unkValue; // Error: Type 'unknown' is not assignable to type 'string'.
 var str3 = unkValue; // Explicit cast
-anyValue.metodo(); // Todo OK, compila. Falla en tiempo de ejecución si el método no existe
+//anyValue.metodo(); // Todo OK, compila. Falla en tiempo de ejecución si el método no existe
 // unkValue.method(); // Error: no lo permite
 var iDontKnow = "typescript";
 //ejercicio
 var nowIKnow = iDontKnow; //utiliza el casteo explicito para asignarle a nowIKnow un string;
-//# sourceMappingURL=ejercicio%202.js.map
+console.log(nowIKnow);

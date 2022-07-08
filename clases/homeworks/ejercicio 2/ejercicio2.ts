@@ -43,13 +43,13 @@ let str1: string = anyValue; // Todo OK, puedo asignarlo
 
 let str3: string = unkValue as string; // Explicit cast
 
-anyValue.metodo(); // Todo OK, compila. Falla en tiempo de ejecución si el método no existe
+//anyValue.metodo(); // Todo OK, compila. Falla en tiempo de ejecución si el método no existe
 
 // unkValue.method(); // Error: no lo permite
 
 let iDontKnow: unknown = "typescript";
 
 //ejercicio
-let nowIKnow: string = iDontKnow; //utiliza el casteo explicito para asignarle a nowIKnow un string;
-
+let nowIKnow: string = iDontKnow as string; //utiliza el casteo explicito para asignarle a nowIKnow un string;
+console.log(nowIKnow)
 export {}
