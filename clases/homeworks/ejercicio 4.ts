@@ -64,10 +64,10 @@ Lunes.saludo('Matias')
 let Sabado = new Night()
 Sabado.saludo('Matias')
 
-//Tambien se permite implementar varias interfaces en una clase:
+//Tambien se permite implementar o extender varias interfaces en una clase:(same syntax for bot)
 //class ClassName implements IInterfaceName1, IInterfaceName2 {
 //}
-
+//https://www.koderhq.com/tutorial/typescript/interface/
 //----------------------------------------------------------------------------------------------------------------------
 
 
@@ -85,6 +85,7 @@ type Student = Person & {
     isActive: boolean;
 }
 
+
 let Fede: Student = {
     name: 'Fede',
     age: 29,
@@ -92,5 +93,64 @@ let Fede: Student = {
 }
 
 //Investiga sus diferencias
+//https://blog.logrocket.com/extending-object-like-types-interfaces-typescript/
+//un buen articulo sobre interfaces y types a la hora de extender, pero no pareciera remarcar diferencias, mas bien concluye
+//que es solo una decision de estilo y organizacion propia.
+//SIN EMBARGO
+//https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces
+//documentacion de typescript explica que agregar campos a una interfaz es tan sencillo como re-declararlas de nuevo y 
+//anotar los nuevos campos, y a los tipos en cambio no se los puede re-declarar
+//ej.:(estan en el link, solo saque el getBear() xq nose que seria ese metodo, lo adapto aca a lo que se)
+//----------------------------------------------------------------------------------------------------------------------
+//Extending an interface
+interface Animal {
+  name: string
+}
+
+interface Bear extends Animal {
+  honey: boolean
+}
+
+const bear: Bear = {
+    name: 'Bear',
+    honey: true
+}
+
+//Adding new fields to an existing interface
+
+interface Bee {
+    name: string
+  }
+  
+  interface Bee {
+    isQueen: boolean
+  }
+  
+  const someBee: Bee = {
+    name: 'J Bee',
+    isQueen: true
+    }
+//---------------------------------------------------------------------------------------------------------------------
+ 
+//Hacer esto mismo en types da Duplicate Identifier Error   
+
+type Dog = {
+    name: string
+}
+
+// type Dog = {
+//     itsFriendly: string
+// }
+
+//si puedo como ya se explico arriba
+type FriendlyDog = Dog & {
+    itsFriendly: string
+}
+
+const Firulais: FriendlyDog = {
+    name: 'Firulais',
+    itsFriendly: 'its friendly'
+}
+
 
 export {}
