@@ -40,4 +40,3 @@ student.getFullInfo(); // "Franco (26 years old) - not regular"
 student.name; // Property 'name' is protected and only accessible within class 'Person' and its subclasses
 student.age; // Property 'age' is protected and only accessible within class 'Person' and its subclasses.
 student.regular; // Property 'regular' is private and only accessible within class 'Student'
-//# sourceMappingURL=ejercicio%205.js.map

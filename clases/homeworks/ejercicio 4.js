@@ -19,4 +19,3 @@ var Fede = {
     age: 29,
     isActive: false
 };
-//# sourceMappingURL=ejercicio%204.js.map

@@ -6,4 +6,3 @@ function pluck(arreglo, prop) {
         return object[prop];
     });
 }
-//# sourceMappingURL=ejercicio%208.js.map

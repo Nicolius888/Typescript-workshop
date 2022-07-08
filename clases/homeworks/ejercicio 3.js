@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 // Array
 var tennisPoints = [15, 30, 40];
 var anotherWay = [15, 30, 40];
@@ -7,4 +7,9 @@ var anotherWay = [15, 30, 40];
 var dynamicList = ["Franco", 26, true];
 // Tuple
 var person = ["Franco", 26];
-//# sourceMappingURL=ejercicio%203.js.map
+//let extendIncorrectPerson: [string, number] = ["Franco", 26, true]; // Error
+//crea una tupla, donde en la primera posicion haya un booleano y en la segunda un string
+var miTupla = [true, "Nico"];
+//crea un arreglo de strings
+var stArray = ["hi", "type", "script"];
+console.log(miTupla, stArray);

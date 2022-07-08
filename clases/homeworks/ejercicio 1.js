@@ -30,4 +30,3 @@ var userActions;
 })(userActions || (userActions = {}));
 var action = userActions.postUser;
 console.log(action);
-//# sourceMappingURL=ejercicio%201.js.map
