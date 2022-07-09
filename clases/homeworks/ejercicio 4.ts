@@ -38,7 +38,7 @@ interface Estudiante extends Persona {
 //despues cuando creamos objetos para nuestra clase heradan sus propiedades y metodos de la interfaz.
 //ver video de classes para terminar de entender esto.
 //----------------------------------------------------------------------------------------------------------------------
-//aca creamos una interfaz que requiere un nombre:string y devuelve una string
+//aca creamos una interfaz que requiere un persona:string y devuelve una string
 interface Greeting {
     saludo:(persona: string) => void //investigar estas sintaxis
     //despedida:() => string
@@ -142,7 +142,8 @@ type Dog = {
 //     itsFriendly: string
 // }
 
-//si puedo como ya se explico arriba
+//si puedo como ya se explico arriba, pero esto es extender, no agregar una propiedad, es decir generamos un nuevo tipo 
+//que hereda lo del anterior
 type FriendlyDog = Dog & {
     itsFriendly: string
 }
