@@ -1,23 +1,24 @@
 class Person {
-    protected name: string;
-    protected age: number;
+    protected name: string;   //So i guess this is where you declare the types of the variables
+    private age: number;
     //private mail: string;
-    constructor(name: string, age: number) {
-      this.name = name;
-      this.age = age;
+    constructor(newName: string, newAge: number) {   // and here where you pass it to the constructor, but why you give the types again?
+      this.name = newName;                           //now i get it
+      this.age = newAge;
     }
   }
   
   class Student extends Person {
-    private regular: boolean;
+    private regular: boolean;//declare
     
-    constructor(name: string, age: number, regular: boolean) {
-      super(name, age);
-      this.regular = regular;
+    constructor(name: string, age: number, regular: boolean) { //declare the arguments for the constructor (when = new Student(...))
+      super(name, age);//call the inherit variables
+      this.regular = regular; //asign the argument to the variable
     }
     
     getFullInfo() {
-      return `${this.name} (${this.age} years old) - ${this.regular ? 'regular' : 'not regular'}`;
+      return `${this.name} (${this.age} years old) - ${this.regular ? 'regular' : 'not regular'}`;//x ex.: if we change age to private,
+                                                                                                  //we cannot use it here
     }
   }
   
