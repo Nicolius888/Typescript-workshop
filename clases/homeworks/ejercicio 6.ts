@@ -20,7 +20,7 @@ let resultado1 = sumaYStrings(2, 2); // if we hover the variable, it gets the ty
 function voidFunction(something: string): void {
     console.log("voidFunction says: " + something);
 }
-
+voidFunction("hola");
 //never
 //this is used for functions that never return, for example, when a function throws an error.
 function neverFunction(msg: string): never {
@@ -30,18 +30,24 @@ function neverFunction(msg: string): never {
 // the idea is that the execution never reaches the end of the function, so it never returns.
 
 //remember that in TypeScript, we always can delacre a optional parameter
-function optionalParameter(a: number, b: number, c?: number): number {
+function optionalParameter(a: number, b: number, c?: number): void {
    let result:number = c ? (a + b + c) :  (a + b); //this is an adecuate (and safe) implementation for the optional parameter
-   return result;
+   console.log(result);
 }
-
+//aca vamos a cambiar todos los return por console.log() para testeo, e inevitablemente cambiamos el tipo de return a Void.
+optionalParameter(2, 2, 5);//9
 //in Javascript we can sum a number with a string,
 //but in TypeScript some thigns happens
 
 function suma2(a: number | string, b: string | number): number | string | void {
-    if(typeof a === "number" && typeof b === "number") return a + b;
-    if(typeof a === "string" && typeof b === "string") return a + b;
+    if(typeof a === "number" && typeof b === "number") console.log(a + b);
+    if(typeof a === "string" && typeof b === "string") console.log(a + b);
+    if(typeof a === "number" && typeof b === "string") console.log(a + b);
+    if(typeof a === "string" && typeof b === "number") console.log(a + b);
 }
+suma2(2, 2);//4
+suma2("2", "2");//"22"
+suma2(2, "2");//"22", concatena strings.
 //or we can create a lot of ways to resolve this
 function suma3(a: number | string, b: string | number): number {
 if(typeof a === "string"){
@@ -54,3 +60,5 @@ return a + b;
 }    
 //in this case we always return a number.
 // but keep whit the lessons, there's more to solve this.
+neverFunction("ERROR!");
+//this works BUT ends the execution of the script.so we put it in the end.
