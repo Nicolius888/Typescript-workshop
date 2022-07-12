@@ -11,6 +11,10 @@ function conq (a: any, b: any): any {              //sin este overload no se pue
     return a + b;                                  //obtenemos: This overload signature is not compatible with its implementation signature.
 }                                                  //cuando si las probamos por separado, si se puede hacer el llamado.
 
-let coso = conq(some, palabra);
+let coso = conq(some, number);
+
+//Since the return type can be either string or number as per the first two function declarations,
+//we must use compatible parameters and return type as any in the function definition.
+
 
 // Logra que esta funcion tambien concatene strings
