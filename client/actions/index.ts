@@ -1,5 +1,7 @@
 import axios from 'axios';
-import { Dispatch } from 'redux';
+import { Dispatch } from 'redux';//this is the Dispatch type, 
+                                 //remember, when using preseted functions
+								 //search in documentation for the type
 
 const url = 'https://localhost:3001/user';
 

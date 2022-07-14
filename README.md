@@ -555,7 +555,7 @@ export default function reducer(state = initialState, action) {
 Nos va a arrojar el siguiente error:
 
 <p align="center">
-  <img src="./img-screens/2.png" />
+  <img src="./client/img-screens/2.png" />
 </p>
 
 Nuevamente debido al chequeo de tipos que realiza Typescript vamos a tener que hacer algunos ajustes a nuestro reducer. Debemos definir las interfaces para nuestro estado y para nuestras actions. Podemos hacerlo directaente en ese mismo archivo del reducer.
@@ -600,7 +600,7 @@ ReactDOM.render(
 ¿Todo OK? Nop, Typescript otra vez...
 
 <p align="center">
-  <img src="./img-screens/4.png" />
+  <img src="./client/img-screens/4.png" />
 </p>
 
 Para que el módulo de `react-redux` funcione correctamente con Typescript debemos adicionalmente instalar un módulo separado en donde están definido los tipos de datos. Si observamos en el mensaje de error incluso nos dice como hacerlo.
@@ -632,7 +632,7 @@ export const fetchUsers = () => {
 ```
 
 <p align="center">
-  <img src="./img-screens/6.png" />
+  <img src="./client/img-screens/6.png" />
 </p>
 
 <p align="center">
@@ -660,7 +660,7 @@ De antemano no podemos saberlo por lo que va a ser del tipo `any`. Por otro lado
 Vamos a mejorar un poco esto definiendo la estructura que debería tener la respuesta al GET. Para eso veamos que nos está devolviendo dicho endpoint:
 
 <p align="center">
-  <img src="./img-screens/8.png" />
+  <img src="./client/img-screens/8.png" />
 </p>
 
 Como pueden observar en la imagen deberíamos tener:
@@ -891,7 +891,7 @@ useEffect(() => {
 Si observamos las request enviadas al abrir nuestra aplicación veremos que efectivamente el request para solicitar los USERS a la API están funcionando:
 
 <p align="center">
-  <img src="./img-screens/9.png" />
+  <img src="./client/img-screens/9.png" />
 </p>
 
 **OPCIONAL**: Vamos a configurar redux devtools para poder ver y debuggear nuestra aplicación.
@@ -918,7 +918,7 @@ export default store;
 ```
 
 <p align="center">
-  <img src="./img-screens/10.png" />
+  <img src="./client/img-screens/10.png" />
 </p>
 
 Recuerden que el nombre de la acción figura como un 0 debido a que utilizamos un Enum con sus valores por defecto, si ustedes le asignaron un String van a ver dicho nombre allí.
@@ -945,7 +945,7 @@ function App(props: AppProps) {
 Con eso ya tendríamos un listado de nuestros Users
 
 <p align="center">
-  <img src="./img-screens/11.png" />
+  <img src="./client/img-screens/11.png" />
 </p>
 
 #### Eliminar algun Users
@@ -953,7 +953,7 @@ Con eso ya tendríamos un listado de nuestros Users
 Para esta funcionalidad no habrá ningún tipo de ayuda, en función de todo lo que vimos hasta ahora deberán agregar un botón por cada User para que al hacerle click elimine dicho User del listado total.
 
 <p align="center">
-  <img src="./img-screens/12.jpg" />
+  <img src="./client/img-screens/12.jpg" />
 </p>
 
 **AYUDA**: Para cuando tengan que en el reducer aceptar más de un tipo de action pueda hacer una unión utilizando al caracter `|`. Por ejemplo:
@@ -1005,5 +1005,5 @@ Adicionalmente para mejorar un poco la UX de nuestra paǵina sería bueno tener 
 Implementar dicha funcionalidad con lo visto hasta el momento.
 
 <p align="center">
-  <img src="./img-screens/13.jpg" />
+  <img src="./client/img-screens/13.jpg" />
 </p>
