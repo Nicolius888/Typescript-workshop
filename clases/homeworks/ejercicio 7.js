@@ -1,7 +1,7 @@
+var some = 34;
+var thing = "hola";
 function suma1(a, b) {
-    var a = parseInt(process.argv[2]);
-    var b = parseInt(process.argv[3]);
     console.log(a + b);
 }
-suma1();
+suma1(some, thing);
 // Logra que esta funcion tambien concatene strings

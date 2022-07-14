@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 //tipado inferido
 var mati = {
     nombre: 'Matias',
@@ -45,4 +45,16 @@ var Fede = {
     name: 'Fede',
     age: 29,
     isActive: false
+};
+var bear = {
+    name: 'Bear',
+    honey: true
+};
+var someBee = {
+    name: 'J Bee',
+    isQueen: true
+};
+var Firulais = {
+    name: 'Firulais',
+    itsFriendly: 'its friendly'
 };

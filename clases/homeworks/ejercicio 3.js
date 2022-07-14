@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 // Array
 var tennisPoints = [15, 30, 40];
 var anotherWay = [15, 30, 40];

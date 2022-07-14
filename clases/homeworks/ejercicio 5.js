@@ -17,9 +17,9 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var Person = /** @class */ (function () {
     //private mail: string;
-    function Person(name, age) {
-        this.name = name;
-        this.age = age;
+    function Person(newName, newAge) {
+        this.name = newName; //now i get it
+        this.age = newAge;
     }
     return Person;
 }());
@@ -27,11 +27,12 @@ var Student = /** @class */ (function (_super) {
     __extends(Student, _super);
     function Student(name, age, regular) {
         var _this = _super.call(this, name, age) || this;
-        _this.regular = regular;
+        _this.regular = regular; //asign the argument to the variable
         return _this;
     }
     Student.prototype.getFullInfo = function () {
-        return "".concat(this.name, " (").concat(this.age, " years old) - ").concat(this.regular ? 'regular' : 'not regular');
+        return "".concat(this.name, " (").concat(this.age, " years old) - ").concat(this.regular ? 'regular' : 'not regular'); //x ex.: if we change age to private,
+        //we cannot use it here
     };
     return Student;
 }(Person));

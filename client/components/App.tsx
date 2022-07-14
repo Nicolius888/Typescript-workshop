@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function App() {
 	return (
 		<div>
@@ -6,8 +8,3 @@ export default function App() {
     )
 }
 
-// interface AppProps {
-//     title: string;
-//   }
-// {title}:AppProps
-// : JSX.Element
