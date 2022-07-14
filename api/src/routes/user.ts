@@ -24,8 +24,22 @@ router.post('/user', (req: Request, res: Response, next: NextFunction) => {
 	const user = req.body;
 	User.create(user)
 		.then((createdUser) => {
-			res.send(createdUser);
+			res.send("created " + createdUser);
 		})
+		.catch((error) => next(error));
+});
+
+router.delete('/user/:id', (req: Request, res: Response, next: NextFunction) => {
+	const { id } = req.params;
+	User.destroy({
+		where: {
+			id: id
+		}
+	})
+		.then((deletedUser) => {
+			res.send("user " + deletedUser + " deleted");
+		}
+		)
 		.catch((error) => next(error));
 });
 
